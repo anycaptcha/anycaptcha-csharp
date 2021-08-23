@@ -19,7 +19,7 @@ namespace Example
                 Console.WriteLine(getBalanceRequest.Message);
 
 
-            var imageToTextRequest = new AnyCaptcha().ImageToText(clientkey, "captcha.jpg", "COMMON", 145);
+            var imageToTextRequest = new AnyCaptcha().ImageToText(clientkey, "captcha.jpg", "COMMON");
             if (imageToTextRequest.IsSuccess)
                 Console.WriteLine(imageToTextRequest.Result);
             else
