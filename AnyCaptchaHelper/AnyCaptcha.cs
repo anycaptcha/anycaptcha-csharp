@@ -37,7 +37,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult ImageToText(string clientKey, string filePath)
+        public AnyCaptchaResult ImageToText(string clientKey, string filePath, string subType = "COMMON", int timeoutSecond = 145)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -52,7 +52,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
@@ -69,7 +69,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult HCaptchaProxyless(string clientKey, string websiteKey, string websiteURL)
+        public AnyCaptchaResult HCaptchaProxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 145)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -85,7 +85,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
@@ -102,7 +102,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult RecaptchaV2Proxyless(string clientKey, string websiteKey, string websiteURL)
+        public AnyCaptchaResult RecaptchaV2Proxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 145)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -117,7 +117,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
@@ -135,7 +135,7 @@ namespace AnyCaptchaHelper
             return result;
         }
         public AnyCaptchaResult RecaptchaV2(string clientKey, string websiteKey, string websiteURL, string UserAgent,
-            ProxyTypeOption proxyType, string proxyAddress, int? proxyPort, string proxyLogin, string proxyPassword)
+            ProxyTypeOption proxyType, string proxyAddress, int? proxyPort, string proxyLogin, string proxyPassword, int timeoutSecond = 145)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -156,7 +156,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
@@ -173,7 +173,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult RecaptchaV3Proxyless(string clientKey, string websiteKey, string websiteURL, string pageAction, bool isEnterprise = false)
+        public AnyCaptchaResult RecaptchaV3Proxyless(string clientKey, string websiteKey, string websiteURL, string pageAction, bool isEnterprise = false, int timeoutSecond = 145)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -190,7 +190,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
@@ -207,7 +207,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult FunCaptchaProxyless(string clientKey, string websiteKey, string websiteURL)
+        public AnyCaptchaResult FunCaptchaProxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 145)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -223,7 +223,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
@@ -240,7 +240,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public GeetestResult GeetestProxyless(string clientKey, string websiteKey, string websiteURL, string websiteChallenge)
+        public GeetestResult GeetestProxyless(string clientKey, string websiteKey, string websiteURL, string websiteChallenge, int timeoutSecond = 145)
         {
             GeetestResult result = new GeetestResult();
             try
@@ -257,7 +257,7 @@ namespace AnyCaptchaHelper
                 {
                     result.Message = api.ErrorMessage;
                 }
-                else if (!api.WaitForResult())
+                else if (!api.WaitForResult(timeoutSecond))
                 {
                     result.Message = "Could not solve the captcha.";
                 }
