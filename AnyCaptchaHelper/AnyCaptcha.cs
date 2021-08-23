@@ -27,6 +27,7 @@ namespace AnyCaptchaHelper
                 }
                 else
                 {
+                    result.IsSuccess = true;
                     result.Message = "Success";
                     result.Balance = balance.Value;
                 }
@@ -45,7 +46,41 @@ namespace AnyCaptchaHelper
                 var api = new ImageToText
                 {
                     ClientKey = clientKey,
-                    FilePath = filePath
+                    FilePath = filePath,
+                    SubType = subType
+                };
+
+                if (!api.CreateTask())
+                {
+                    result.Message = api.ErrorMessage;
+                }
+                else if (!api.WaitForResult(timeoutSecond))
+                {
+                    result.Message = "Could not solve the captcha.";
+                }
+                else
+                {
+                    result.IsSuccess = true;
+                    result.Message = "Success";
+                    result.Result = api.GetTaskSolution().Text;
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.ToString();
+            }
+            return result;
+        }
+        public AnyCaptchaResult ImageToTextFromBase64(string clientKey, string base64, string subType = "COMMON", int timeoutSecond = 145)
+        {
+            AnyCaptchaResult result = new AnyCaptchaResult();
+            try
+            {
+                var api = new ImageToText
+                {
+                    ClientKey = clientKey,
+                    BodyBase64 = base64,
+                    SubType = subType
                 };
 
                 if (!api.CreateTask())
