@@ -1,0 +1,9 @@
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\bin\Debug\Example.exe.config
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\bin\Debug\Example.exe
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\bin\Debug\Example.pdb
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\bin\Debug\AnyCaptchaHelper.dll
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\obj\Debug\Example.csproj.CoreCompileInputs.cache
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\obj\Debug\Example.csproj.CopyComplete
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\obj\Debug\Example.exe
+D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\Example\obj\Debug\Example.pdb
