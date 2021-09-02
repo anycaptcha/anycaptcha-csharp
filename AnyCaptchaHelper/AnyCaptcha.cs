@@ -38,7 +38,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult ImageToText(string clientKey, string filePath, string subType = "COMMON", int timeoutSecond = 145)
+        public AnyCaptchaResult ImageToText(string clientKey, string filePath, string subType = "COMMON", int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -71,7 +71,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult ImageToTextFromBase64(string clientKey, string base64, string subType = "COMMON", int timeoutSecond = 145)
+        public AnyCaptchaResult ImageToTextFromBase64(string clientKey, string base64, string subType = "COMMON", int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -104,7 +104,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult HCaptchaProxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 145)
+        public AnyCaptchaResult HCaptchaProxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -137,7 +137,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult RecaptchaV2Proxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 145)
+        public AnyCaptchaResult RecaptchaV2Proxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -170,7 +170,7 @@ namespace AnyCaptchaHelper
             return result;
         }
         public AnyCaptchaResult RecaptchaV2(string clientKey, string websiteKey, string websiteURL, string UserAgent,
-            ProxyTypeOption proxyType, string proxyAddress, int? proxyPort, string proxyLogin, string proxyPassword, int timeoutSecond = 145)
+            ProxyTypeOption proxyType, string proxyAddress, int? proxyPort, string proxyLogin, string proxyPassword, int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -208,7 +208,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult RecaptchaV3Proxyless(string clientKey, string websiteKey, string websiteURL, string pageAction, bool isEnterprise = false, int timeoutSecond = 145)
+        public AnyCaptchaResult RecaptchaV3Proxyless(string clientKey, string websiteKey, string websiteURL, string pageAction, bool isEnterprise = false, int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -242,7 +242,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public AnyCaptchaResult FunCaptchaProxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 145)
+        public AnyCaptchaResult FunCaptchaProxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
             try
@@ -275,7 +275,7 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
-        public GeetestResult GeetestProxyless(string clientKey, string websiteKey, string websiteURL, string websiteChallenge, int timeoutSecond = 145)
+        public GeetestResult GeetestProxyless(string clientKey, string websiteKey, string websiteURL, string websiteChallenge, int timeoutSecond = 230)
         {
             GeetestResult result = new GeetestResult();
             try
