@@ -59,6 +59,7 @@
     <Compile Include="Api\RecaptchaV2Proxyless.cs" />
     <Compile Include="Api\RecaptchaV3Proxyless.cs" />
     <Compile Include="AnyCaptcha.cs" />
+    <Compile Include="Api\ZaloTask.cs" />
     <Compile Include="Helper\HttpHelper.cs" />
     <Compile Include="Helper\JsonHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />

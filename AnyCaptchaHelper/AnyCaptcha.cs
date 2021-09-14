@@ -315,6 +315,39 @@ namespace AnyCaptchaHelper
             return result;
         }
 
+        public AnyCaptchaResult Zalo(string clientKey, int timeoutSecond = 230)
+        {
+            AnyCaptchaResult result = new AnyCaptchaResult();
+            try
+            {
+
+                var api = new ZaloTask
+                {
+                    ClientKey = clientKey,
+                };
+                if (!api.CreateTask())
+                {
+                    result.Message = api.ErrorMessage;
+                }
+                else if (!api.WaitForResult(timeoutSecond))
+                {
+                    result.Message = "Could not solve the captcha.";
+                }
+                else
+                {
+                    result.IsSuccess = true;
+                    result.Message = "Success";
+                    result.Result = api.GetTaskSolution().GRecaptchaResponse;
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.ToString();
+            }
+            return result;
+        }
+
+
     }
 
     public class BalanceResult

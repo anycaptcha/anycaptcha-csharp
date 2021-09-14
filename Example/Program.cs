@@ -47,7 +47,6 @@ namespace Example
                 Console.WriteLine(recaptchaV2ProxylessRequest.Message);
 
 
-
             var recaptchaV3ProxylessRequest = new AnyCaptcha().RecaptchaV3Proxyless(clientkey, "6Lf-TMIZAAAAAOD-4H1eJo2Rbiej7hv50_UkEvEt", "https://vico.vn/dang-tin-rao-vat.html", "", false);
             if (recaptchaV3ProxylessRequest.IsSuccess)
                 Console.WriteLine(recaptchaV3ProxylessRequest.Result);
@@ -55,12 +54,18 @@ namespace Example
                 Console.WriteLine(recaptchaV3ProxylessRequest.Message);
 
 
-
             var funCaptchaProxylessRequest = new AnyCaptcha().FunCaptchaProxyless(clientkey, "B7D8911C-5CC8-A9A3-35B0-554ACEE604DA", "https://outlook.live.com");
             if (funCaptchaProxylessRequest.IsSuccess)
                 Console.WriteLine(funCaptchaProxylessRequest.Result);
             else
                 Console.WriteLine(funCaptchaProxylessRequest.Message);
+
+
+            var zaloRequest = new AnyCaptcha().Zalo(clientkey);
+            if (zaloRequest.IsSuccess)
+                Console.WriteLine(zaloRequest.Result);
+            else
+                Console.WriteLine(zaloRequest.Message);
 
         }
     }
