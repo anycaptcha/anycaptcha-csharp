@@ -9,7 +9,7 @@ namespace Example
 {
     class Program
     {
-        static readonly string clientkey = "input your key here";
+        static readonly string clientkey = "input client key here";
         static void Main(string[] args)
         {
             var getBalanceRequest = new AnyCaptcha().GetBalance(clientkey);

@@ -260,7 +260,7 @@ namespace AnyCaptchaHelper
                 }
                 else if (!api.WaitForResult(timeoutSecond))
                 {
-                    result.Message = "Could not solve the captcha.";
+                    result.Message = api.ErrorMessage;
                 }
                 else
                 {

@@ -5,4 +5,3 @@ D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\AnyCaptchaHelper\obj\Debug\AnyCaptc
 D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\AnyCaptchaHelper\obj\Debug\AnyCaptchaHelper.csproj.CopyComplete
 D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\AnyCaptchaHelper\obj\Debug\AnyCaptchaHelper.dll
 D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\AnyCaptchaHelper\obj\Debug\AnyCaptchaHelper.pdb
-D:\Projects\AnyCaptcha\Git\anycaptcha-csharp\AnyCaptchaHelper\obj\Debug\AnyCaptchaHelper.csproj.AssemblyReference.cache
