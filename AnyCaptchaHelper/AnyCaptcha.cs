@@ -137,6 +137,44 @@ namespace AnyCaptchaHelper
             }
             return result;
         }
+        public AnyCaptchaResult HCaptcha(string clientKey, string websiteKey, string websiteURL, string proxy, int proxyPort, string proxyUser, string proxyPass, int timeoutSecond = 230)
+        {
+            AnyCaptchaResult result = new AnyCaptchaResult();
+            try
+            {
+
+                var api = new HCaptcha
+                {
+                    ClientKey = clientKey,
+                    WebsiteUrl = new Uri(websiteURL),
+                    WebsiteKey = websiteKey,
+                    ProxyPort = proxyPort,
+                    ProxyAddress = proxy,
+                    ProxyLogin = proxyUser,
+                    ProxyPassword = proxyPass,
+                    ProxyType= ProxyTypeOption.Http
+                };
+                if (!api.CreateTask())
+                {
+                    result.Message = api.ErrorMessage;
+                }
+                else if (!api.WaitForResult(timeoutSecond))
+                {
+                    result.Message = "Could not solve the captcha.";
+                }
+                else
+                {
+                    result.IsSuccess = true;
+                    result.Message = "Success";
+                    result.Result = api.GetTaskSolution().GRecaptchaResponse;
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.ToString();
+            }
+            return result;
+        }
         public AnyCaptchaResult RecaptchaV2Proxyless(string clientKey, string websiteKey, string websiteURL, int timeoutSecond = 230)
         {
             AnyCaptchaResult result = new AnyCaptchaResult();
